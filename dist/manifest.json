@@ -1,0 +1,32 @@
+{
+    "key": "jbacbndmagnjpigcjpeiiffaemgeinga",
+    "manifest_version": 2,
+    "name": "PassportExtension",
+    "version": "1.0",
+    "description": "PassportExtension",
+    "icons": {
+        "128": "logo.png"
+    },
+    "browser_action": {
+        "default_title": "",
+        "default_icon": "logo.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "cookies",
+        "<all_urls>",
+        "clipboardWrite",
+        "clipboardRead",
+        "identity",
+        "identity.email"
+    ],
+    "oauth2": {
+        "client_id": "294540986299-on4oith7fml2vhsumdesfr9npjr8r2um.apps.googleusercontent.com",
+        "scopes": [
+            "openid",
+            "email",
+            "profile"
+        ]
+    }
+}
