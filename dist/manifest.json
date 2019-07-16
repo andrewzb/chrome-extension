@@ -1,5 +1,5 @@
 {
-    "key": "jbacbndmagnjpigcjpeiiffaemgeinga",
+    "key": "<app_id>",
     "manifest_version": 2,
     "name": "PassportExtension",
     "version": "1.0",
@@ -22,11 +22,14 @@
         "identity.email"
     ],
     "oauth2": {
-        "client_id": "294540986299-on4oith7fml2vhsumdesfr9npjr8r2um.apps.googleusercontent.com",
+        "server": "<server_url>",
+        "rout": "https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=",
+        "client_id": "Goofle_auth_id",
         "scopes": [
             "openid",
             "email",
             "profile"
         ]
     }
+
 }

@@ -10,6 +10,7 @@ import DataListView from './views/DataListViiew';
 import Items from './utils/Items';
 
 const STATE = {};
+var manifestData = chrome.runtime.getManifest();
 
 // Wellcome controller
 const WelcomeController = () => {
@@ -33,7 +34,7 @@ const SpinnerController = () => {
     });
   const email = STATE.User.getEmail();
   axios
-    .post('http://localhost:4000/api/ext/getdata', {
+    .post(`${manifestData.oauth2.server}`, {
       email,
     })
     .then(res => {
@@ -116,7 +117,7 @@ window.onload = () => {
           const x = new XMLHttpRequest();
           x.open(
             'GET',
-            `https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${token}`
+            `${manifestData.oauth2.rout}${token}`
           );
           x.onload = function () {
             alert(x.response);
